@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>лаба9</title>
+</head>
+<body>
+<article>
+<p>Текст</p>
+	<div>
+		<input type="text" id="txt">
+		<input type="button" value="Далее" onclick="tex()">
+	</div>
+<p>Цвет</p>
+	<div>
+		<input type="text" id="back">
+		<input type="button" value="Далее" onclick="Color()">
+	</div>
+<p>Ссылка</p>
+	<div>
+		<input type="text" id="link">
+		<input type="button" value="Далее" onclick="link()">
+	</div>
+	<a href="#">Ссылка</a>
+	<a href="#">Ссылка1</a>
+</article>
+<script>
+function tex(){
+let valuee = document.getElementById('txt').value;
+let txt = document.getElementsByTagName('p');
+for (let elem of txt){
+elem.style.color = valuee;
+}}
+
+function Color(){
+let valuee = document.getElementById('col').value;
+document.getElementsByTagName('article')[0].style.backgroundColor = valuee;
+}
+
+function link(){
+let valuee = document.getElementById('link').value;
+let link = document.links;
+for (let elem of link){
+elem.innerText = valuee;
+elem.setAttribute('href', valuee);
+}}
+</script>
+</body>
+</html>
